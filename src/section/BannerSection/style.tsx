@@ -35,12 +35,15 @@ export const TextBlock = styled.div`
 
 export const Primary = styled.h1`
     font-size: 80px;
+    line-height: 94px;
     color: #BAE5A3;
     text-align: right;
+    margin-bottom: 24px ;
 `;
 
 export const Secondary = styled.h3`
     font-size: 36px;
+    line-height: 66px;
     color: #FFFFFF;
     text-align: right;
 `;

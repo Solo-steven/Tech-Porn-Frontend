@@ -22,6 +22,7 @@ export const Link = styled.div`
     padding: 8px;
     color: #FFFFFF;
     font-size: 19px;
+    cursor: pointer;
     &:hover {
         color: #BAE5A3;
     }
