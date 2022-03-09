@@ -16,17 +16,35 @@ export const Container = styled(BaseContainer)`
     padding-top:27.5px;
     padding-bottom: 27.5px;
     display: flex;
-    justify-content: center
+    justify-content: center;
+    ${props => props.theme.breakpoints.xs} {
+        flex-direction: column-reverse ;
+        justify-content: center;
+    }
+    ${props => props.theme.breakpoints.lg} {
+        flex-direction: row ;
+        justify-content: center;
+    }
 `;
 
 export const CopyRight = styled.p`
     color: #FFFFFF;
     font-size: 16px;
+    line-height: 25px;
     font-family: Roboto;
+    font-weight: 400;
+    text-align: center;
 `;
 
 export const Spacer = styled.div`
     flex-grow: 1;
+    
+`;
+
+export const IconContainer = styled.div`
+    display: flex ;
+    justify-content: center;
+    margin-bottom: 28px ;
 `;
 
 export const Icon = styled.img`

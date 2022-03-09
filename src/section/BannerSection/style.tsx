@@ -22,7 +22,9 @@ export const BannerBackground = styled.div`
 `;
 
 export const Container = styled(BaseContainer)`
-    padding-top: 210px;
+    ${props => props.theme.breakpoints.xs} {
+        padding-top: 210px !important;
+    }
 `;
 
 export const TextBlock = styled.div`
@@ -34,18 +36,35 @@ export const TextBlock = styled.div`
 `;
 
 export const Primary = styled.h1`
-    font-size: 80px;
-    line-height: 94px;
     color: #BAE5A3;
     text-align: right;
-    margin-bottom: 24px ;
+    ${props => props.theme.breakpoints.xs} {
+        font-size: 60px;
+        line-height: 70px;
+        margin-bottom: 24px ;
+        text-align: center;
+    }
+    ${props => props.theme.breakpoints.lg} {
+        font-size: 80px;
+        line-height: 94px;
+        margin-bottom: 8px;
+        text-align: right;
+    }
 `;
 
 export const Secondary = styled.h3`
-    font-size: 36px;
-    line-height: 66px;
     color: #FFFFFF;
     text-align: right;
+    ${props => props.theme.breakpoints.xs} {
+        font-size: 36px;
+        line-height: 66px;
+        text-align: center;
+    }
+    ${props => props.theme.breakpoints.lg} {
+        font-size: 30px;
+        line-height: 49px;
+        text-align: right;
+    }
 `;
 
 export const Image = styled.img`

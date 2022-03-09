@@ -1,10 +1,12 @@
 import React from "react";
-import { Global } from "@emotion/react";
+import { Global, ThemeProvider } from "@emotion/react";
+import theme from "system/theme";
 import{ HomePage } from "pages/Home";
+
 
 const App: React.FC = () => {
     return (
-        <div>
+        <ThemeProvider theme={theme}>
             <Global
                 styles={{
                     "*": {
@@ -16,7 +18,7 @@ const App: React.FC = () => {
                 }}
             />
             <HomePage />
-        </div>
+        </ThemeProvider>
     );
 };
 

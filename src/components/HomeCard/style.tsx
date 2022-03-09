@@ -11,20 +11,39 @@ export const Container = styled.div`
 
 export const Title = styled.h1`
     color: #BAE5A3;
-    font-size: 36px;
     font-weight: 500;
-    line-height: 66px;
-    text-align: left;
-    margin-bottom: 24px;
+    ${props => props.theme.breakpoints.xs} {
+        font-size: 30px;
+        line-height: 49px;
+        text-align: center;
+        margin-bottom: 36px;
+    }
+    ${props => props.theme.breakpoints.lg} {
+        font-size: 36px;
+        line-height: 66px;
+        text-align: left;
+        margin-bottom: 24px;
+    }
 `;
 
 export const Content = styled.p`
     font-size: 19px;
     line-height: 32px;
     color: #FFFFFF;
-    margin-bottom: 48px;
+    ${props => props.theme.breakpoints.xs} {
+        margin-bottom: 36px;
+    }
+    ${props => props.theme.breakpoints.lg} {
+        margin-bottom: 48px;
+    }
 `;
 
-export const ButtonContainer = styled.div`
-
+export const ButtonContainer = styled.div<{ justify? : "left" | "right"}>`
+    display: flex;
+    ${props => props.theme.breakpoints.xs} {
+        justify-content: center;
+    }
+    ${props => props.theme.breakpoints.lg} {
+        justify-content: ${({justify = "left"}) => justify === "left"  ? "flex-start" : "flex-end"}
+    }
 `;

@@ -14,13 +14,15 @@ const Footer: React.FC = () => {
             <Style.Container>
                  <Style.CopyRight>{"Copyright © 2022 程人頻道. All rights reserved."}</Style.CopyRight>
                  <Style.Spacer/>
-                 <Style.Icon src={Apple} alt="footer-icon"/>
-                 <Style.Icon src={Spotify} alt="footer-icon"/>
-                 <Style.Icon src={KKBox} alt="footer-icon"/>
-                 <Style.Icon src={SoundOn} alt="footer-icon"/>
-                 <Style.Icon src={Youtube} alt="footer-icon"/>
-                 <Style.Icon src={FB} alt="footer-icon"/>
-                 <Style.Icon src={IG} alt="footer-icon"/>
+                 <Style.IconContainer>
+                    <Style.Icon src={Apple} alt="footer-icon"/>
+                    <Style.Icon src={Spotify} alt="footer-icon"/>
+                    <Style.Icon src={KKBox} alt="footer-icon"/>
+                    <Style.Icon src={SoundOn} alt="footer-icon"/>
+                    <Style.Icon src={Youtube} alt="footer-icon"/>
+                    <Style.Icon src={FB} alt="footer-icon"/>
+                    <Style.Icon src={IG} alt="footer-icon"/>
+                 </Style.IconContainer>
             </Style.Container>
         </Style.Root>
     );

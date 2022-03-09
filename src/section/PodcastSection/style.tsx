@@ -5,4 +5,14 @@ export const Background  = styled.div`
     width: 100vw;
 `;
 
+export const LayoutContainer = styled.div`
+    ${props => props.theme.breakpoints.xs} {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    ${props => props.theme.breakpoints.lg} {
+        display: block;
+    }
+`;
+
 

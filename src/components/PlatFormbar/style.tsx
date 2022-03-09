@@ -24,9 +24,18 @@ export const IconContainer =styled.div`
 `;
 
 export const Icon = styled.img`
-    width: 64px;
-    height: 64px;
-    &+& {
-        margin-left: 50px;
+    ${props => props.theme.breakpoints.xs} {
+        width: 44px;
+        height: 44px;
+        &+& {
+            margin-left: 42px;
+        }
+    }
+    ${props => props.theme.breakpoints.lg} {
+        width: 64px;
+        height: 64px;
+        &+& {
+            margin-left: 50px;
+        }
     }
 `;

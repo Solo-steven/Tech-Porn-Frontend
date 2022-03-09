@@ -7,11 +7,18 @@ export const Background = styled.div`
     position: absolute;
 `;
 
-export const LayoutContainer = styled(BaseContainer)`
+export const Container = styled(BaseContainer)`
     display: flex;
     justify-content: center;
-    padding-top: 39px;
-    padding-bottom: 39px ;
+    align-items: center;
+    ${props => props.theme.breakpoints.xs} {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    ${props => props.theme.breakpoints.lg} {
+        padding-top: 39px;
+        padding-bottom: 39px ;
+    }
 `;
 
 export const Spacer = styled.div`
@@ -30,3 +37,12 @@ export const Link = styled.div`
         margin-left: 40px;
     }
 `;
+
+export const MenuIcon = () => (
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <line y1="2" x2="20" y2="2" stroke="white" strokeWidth="4"/>
+        <line y1="10" x2="20" y2="10" stroke="white" strokeWidth="4"/>
+        <line y1="18" x2="20" y2="18" stroke="white" strokeWidth="4"/>
+    </svg>
+
+)

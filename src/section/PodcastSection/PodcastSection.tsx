@@ -37,13 +37,15 @@ const IntroSection: React.FC = () => {
                         />
                     }
                 />
-                <PlatformBar />
-                <PreviewLayout>
-                    <PreviewCard imgSrc={podcast01} previewText={"EP113 | 以色列文化衝擊！留學心態與選擇？複利成長的過程！ ft. Eileen"} />
-                    <PreviewCard imgSrc={podcast02} previewText={"EP113 | 以色列文化衝擊！留學心態與選擇？複利成長的過程！ ft. Eileen"}/>
-                    <PreviewCard imgSrc={podcast03} previewText={"EP113 | 以色列文化衝擊！留學心態與選擇？複利成長的過程！ ft. Eileen"} />
-                    <PreviewCard imgSrc={podcast04} previewText={"EP113 | 以色列文化衝擊！留學心態與選擇？複利成長的過程！ ft. Eileen"} />
-                </PreviewLayout>
+                <Style.LayoutContainer>
+                    <PlatformBar />
+                    <PreviewLayout>
+                        <PreviewCard imgSrc={podcast01} previewText={"EP113 | 以色列文化衝擊！留學心態與選擇？複利成長的過程！ ft. Eileen"} />
+                        <PreviewCard imgSrc={podcast02} previewText={"EP113 | 以色列文化衝擊！留學心態與選擇？複利成長的過程！ ft. Eileen"}/>
+                        <PreviewCard imgSrc={podcast03} previewText={"EP113 | 以色列文化衝擊！留學心態與選擇？複利成長的過程！ ft. Eileen"} />
+                        <PreviewCard imgSrc={podcast04} previewText={"EP113 | 以色列文化衝擊！留學心態與選擇？複利成長的過程！ ft. Eileen"} />
+                    </PreviewLayout>
+                </Style.LayoutContainer>
             </BaseContainer>
         </Style.Background>
     );
