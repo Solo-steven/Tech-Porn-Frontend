@@ -5,8 +5,9 @@ import Button from "system/Button";
 export interface HomeCardProps {
     title: string;
     content: string;
-    buttonText: string;
-    buttonDirection: "left" | "right";
+    buttonText?: string;
+    showButton?: boolean
+    buttonDirection?: "left" | "right";
     buttonLink?: string;
 }
 
@@ -15,9 +16,13 @@ const HomeCard: React.FC<HomeCardProps> = (props) => {
         <Style.Container>
             <Style.Title>{props.title}</Style.Title>
             <Style.Content>{props.content}</Style.Content>
-            <Style.ButtonContainer>
-                <Button>{props.buttonText}</Button>
-            </Style.ButtonContainer>
+            {
+                props.showButton ? (
+                    <Style.ButtonContainer>
+                        <Button>{props.buttonText}</Button>
+                    </Style.ButtonContainer>
+                ) : null
+            }
         </Style.Container>
     );
 }

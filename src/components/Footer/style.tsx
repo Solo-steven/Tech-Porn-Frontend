@@ -10,20 +10,24 @@ export const Root = styled.div`
         rgba(78, 104, 77, 0.2) 0%,
         rgba(0, 0, 0, 0) 100%),
         #0E0F0C;
+    width: 100vw;
 `;
 
 export const Container = styled(BaseContainer)`
-    padding-top:27.5px;
-    padding-bottom: 27.5px;
     display: flex;
     justify-content: center;
+    align-items: center;
     ${props => props.theme.breakpoints.xs} {
         flex-direction: column-reverse ;
         justify-content: center;
+        padding-top:27.5px;
+        padding-bottom: 27.5px;
     }
     ${props => props.theme.breakpoints.lg} {
         flex-direction: row ;
         justify-content: center;
+        padding-top:27.5px;
+        padding-bottom: 27.5px;
     }
 `;
 
